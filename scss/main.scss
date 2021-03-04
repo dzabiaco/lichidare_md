@@ -1,0 +1,68 @@
+@import url("https://www.fonts.com/font/urw/lucida");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+$gold: #f9dc28;
+$blue: #1689f0;
+$grey: #27303c;
+$light_grey: #eee;
+
+body {
+    font-family: "Lucida", sans-serif;
+}
+
+.wrapper {
+    .top_nav {
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid $light_grey;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        a {
+            text-decoration: none;
+            color: $grey;
+            padding: 0 20px;
+        }
+
+        .vertical_line {
+            border-left: 1.5px solid rgb(187, 186, 186);
+            height: 100%;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .language {
+            margin-left: 10px;
+
+            div {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 30px;
+                    display: inline-block;
+                }
+
+                span {
+                    vertical-align: center;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        .main_menu {
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            margin-top: 140px;
+            display: flex;
+            a {
+                img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        }
+    }
+}
