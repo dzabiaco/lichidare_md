@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
+@import "scrollbar";
+
 $gold: #f9dc28;
 $blue: #1689f0;
 $grey: #27303c;
@@ -16,6 +18,13 @@ $light_grey: #eee;
 
 body {
     font-family: "Lucida", sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
@@ -29,7 +38,7 @@ body {
         a {
             text-decoration: none;
             color: $grey;
-            margin:0 25px;
+            margin: 0 25px;
         }
 
         .language {
@@ -54,31 +63,33 @@ body {
 
     .logo-block {
         width: 100%;
-        height: 100px;
+        height: 65px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        background-color:$blue;
+        justify-content: space-around;
+        background-color: $blue;
 
         .logo {
             margin-left: 25px;
             margin-top: 15px;
             img {
-                width: 135px;
-                height: 135px;
+                width: 100px;
+                height: 100px;
             }
         }
 
         nav {
-
             a {
                 text-decoration: none;
-                color:$grey;
-                font-size: 25px;
-                padding: 15px;
+                width: 100%;
+                color: $grey;
+                font-size: 20px;
+                padding: 21px 19px 22px 19px;
 
-                &:hover{
-                    background-color: #0386f8;
+                &:hover {
+                    background-color: #006dcc;
+                    color: #fff;
+                    transition: 0.5s;
                 }
             }
         }
@@ -88,18 +99,145 @@ body {
             margin-left: 25px;
 
             img {
-                width: 30px;
-                height: 30px;
+                width: 25px;
+                height: 25px;
                 color: $grey;
             }
             a {
                 text-decoration: none;
                 color: $grey;
-                font-size: 36px;
+                font-size: 20px;
                 margin-left: 10px;
+                padding-left: 5px;
+                &:hover {
+                    color: $grey;
+                    background-color: $blue;
+                }
             }
-
         }
     }
 
+    .slider_section {
+        max-width: 100%;
+        height: 300px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 530px;
+        }
+    }
+
+    .offers {
+        display: flex;
+        flex-direction: row;
+        margin-top: 300px;
+        justify-content: space-around;
+
+        .offer {
+            width: 350px;
+            height: auto;
+            border: 1px solid #eee;
+            padding: 20px;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+            box-shadow: 3px 3px 5px 6px #ccc;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                padding: 20px 0;
+            }
+
+            a {
+                display: block;
+                margin: 0 auto;
+                width: 150px;
+                text-align: center;
+                text-decoration: none;
+                color: #fff;
+                background-color: $blue;
+                padding: 10px;
+            }
+        }
+    }
+
+    .subscription {
+        width: 80%;
+        height: 200px;
+        background-color: #eee;
+        margin: 40px auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h3 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .input {
+            display: flex;
+            justify-content: space-around;
+            input {
+                width: 600px;
+                border: none;
+
+                &:focus{
+                    border:none;
+                    outline: none;
+                }
+
+                &:active{
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            button {
+                border: none;
+                background-color: $blue;
+                color: #fff;
+                margin-left: 30px;
+                padding: 10px;
+                border-radius: 10px;
+                -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+                -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+                box-shadow: 3px 3px 5px 6px #ccc;
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        height: 50px;
+        background-color: $blue;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        p {
+            a {
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                margin-top: 20px;
+            }
+        }
+
+        .cards {
+            img {
+                width: 90px;
+                height: 50px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
 }

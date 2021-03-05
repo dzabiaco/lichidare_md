@@ -1,5 +1,20 @@
 @import url("https://www.fonts.com/font/urw/lucida");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f9dc28; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f9dc28; }
+
 .vertical_line {
   border-left: 1.5px solid #bbbaba;
   height: 100%;
@@ -7,7 +22,13 @@
   margin-left: 5px; }
 
 body {
-  font-family: "Lucida", sans-serif; }
+  font-family: "Lucida", sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box; }
+
+html {
+  margin: 0;
+  padding: 0; }
 
 .wrapper .top_nav {
   height: 30px;
@@ -35,33 +56,133 @@ body {
 
 .wrapper .logo-block {
   width: 100%;
-  height: 100px;
+  height: 65px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #1689f0; }
   .wrapper .logo-block .logo {
     margin-left: 25px;
     margin-top: 15px; }
     .wrapper .logo-block .logo img {
-      width: 135px;
-      height: 135px; }
+      width: 100px;
+      height: 100px; }
   .wrapper .logo-block nav a {
     text-decoration: none;
+    width: 100%;
     color: #27303c;
-    font-size: 25px;
-    padding: 15px; }
+    font-size: 20px;
+    padding: 21px 19px 22px 19px; }
     .wrapper .logo-block nav a:hover {
-      background-color: #0386f8; }
+      background-color: #006dcc;
+      color: #fff;
+      transition: 0.5s; }
   .wrapper .logo-block .phone {
     display: inline-block;
     margin-left: 25px; }
     .wrapper .logo-block .phone img {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       color: #27303c; }
     .wrapper .logo-block .phone a {
       text-decoration: none;
       color: #27303c;
-      font-size: 36px;
-      margin-left: 10px; }
+      font-size: 20px;
+      margin-left: 10px;
+      padding-left: 5px; }
+      .wrapper .logo-block .phone a:hover {
+        color: #27303c;
+        background-color: #1689f0; }
+
+.wrapper .slider_section {
+  max-width: 100%;
+  height: 300px;
+  position: relative; }
+  .wrapper .slider_section img {
+    width: 100%;
+    height: 530px; }
+
+.wrapper .offers {
+  display: flex;
+  flex-direction: row;
+  margin-top: 300px;
+  justify-content: space-around; }
+  .wrapper .offers .offer {
+    width: 350px;
+    height: auto;
+    border: 1px solid #eee;
+    padding: 20px;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 3px 3px 5px 6px #ccc; }
+    .wrapper .offers .offer h1 {
+      text-align: center; }
+    .wrapper .offers .offer p {
+      padding: 20px 0; }
+    .wrapper .offers .offer a {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #1689f0;
+      padding: 10px; }
+
+.wrapper .subscription {
+  width: 80%;
+  height: 200px;
+  background-color: #eee;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .wrapper .subscription h3 {
+    text-align: center;
+    margin-top: 40px; }
+  .wrapper .subscription p {
+    text-align: center; }
+  .wrapper .subscription .input {
+    display: flex;
+    justify-content: space-around; }
+    .wrapper .subscription .input input {
+      width: 600px;
+      border: none; }
+      .wrapper .subscription .input input:focus {
+        border: none;
+        outline: none; }
+      .wrapper .subscription .input input:active {
+        border: none;
+        outline: none; }
+    .wrapper .subscription .input button {
+      border: none;
+      background-color: #1689f0;
+      color: #fff;
+      margin-left: 30px;
+      padding: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+      /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+      -moz-box-shadow: 3px 3px 5px 6px #ccc;
+      /* Firefox 3.5 - 3.6 */
+      box-shadow: 3px 3px 5px 6px #ccc; }
+
+.wrapper .footer {
+  width: 100%;
+  height: 50px;
+  background-color: #1689f0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .wrapper .footer p a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-top: 20px; }
+  .wrapper .footer .cards img {
+    width: 90px;
+    height: 50px;
+    margin: 0;
+    padding: 0; }
